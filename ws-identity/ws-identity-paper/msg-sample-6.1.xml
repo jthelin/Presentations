@@ -1,0 +1,15 @@
+<SOAP:Envelope xmlns:SOAP="...">
+    <SOAP:Header>
+        <wsse:Security
+            xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext">
+            <wsse:UsernameToken>
+                <wsse:Username>myuser</wsse:Username>
+                <wsse:Password Type="wsse:PasswordDigest" >X!Y#Z$a1b@c!1@2a3</wsse:Password>
+            </wsse:UsernameToken>
+            ...
+        </wsse:Security>
+    </SOAP:Header>
+    <SOAP:Body Id="MsgBody">
+        <!-- SOAP Body data -->
+    </SOAP:Body>
+</SOAP:Envelope>

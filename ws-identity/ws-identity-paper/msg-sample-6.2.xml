@@ -1,0 +1,28 @@
+<SOAP:Envelope xmlns:SOAP="...">
+    <SOAP:Header>
+        <wsse:Security
+          xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext">
+            <wsse:BinarySecurityToken Id="X509Token"
+                wsse="http://schemas.xmlsoap.org/ws/2002/12/secext"
+                ValueType="wsse:X509v3"
+                EncodingType="wsse:Base64Binary"
+            >
+            MIIEZzCCA9CgAwIBAgIQEmtJZc0...
+            </wsse:BinarySecurityToken>
+            <ds:Signature
+              xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:SignedInfo> ... </ds:SignedInfo>
+                <ds:SignatureValue> ... </ds:SignatureValue>
+                <ds:KeyInfo>
+                    <wsse:SecurityTokenReference>
+                        <wsse:Reference URI="#X509Token" />
+                    </wsse:SecurityTokenReference>
+                </ds:KeyInfo>
+            </ds:Signature>
+            ...
+        </wsse:Security>
+    </SOAP:Header>
+    <SOAP:Body Id="MsgBody">
+        <!-- SOAP Body data -->
+    </SOAP:Body>
+</SOAP:Envelope>

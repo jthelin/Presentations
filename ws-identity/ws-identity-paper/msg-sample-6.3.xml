@@ -1,0 +1,32 @@
+<SOAP:Envelope xmlns:SOAP="...">
+    <SOAP:Header>
+        <wsse:Security
+          xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext">
+            <saml:Assertion
+                xmlns:saml="urn:oasis:names:tc:SAML:1.0:assertion"
+                MajorVersion="1"
+                MinorVersion="0"
+                AssertionID="SecurityToken-mc375268"
+                Issuer="mycompany"
+                IssueInstant="2002-07-23T11:32:05.6228146-07:00" >
+            ...
+            </saml:Assertion>
+            <ds:Signature
+              xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:SignedInfo> ... </ds:SignedInfo>
+                <ds:SignatureValue> ... </ds:SignatureValue>
+                <ds:KeyInfo>
+                    <wsse:SecurityTokenReference>
+                        <saml:AssertionIDReference>
+                        SecurityToken-mc375268
+                        </saml:AssertionIDReference>
+                    </wsse:SecurityTokenReference>
+                </ds:KeyInfo>
+            </ds:Signature>
+            ...
+        </wsse:Security>
+    </SOAP:Header>
+    <SOAP:Body Id="MsgBody">
+        <!-- SOAP Body data -->
+    </SOAP:Body>
+</SOAP:Envelope>
