@@ -34,8 +34,8 @@
 </DIV>
 <DIV>At its most basic then, the concept of "identity" is about:</DIV>
 <OL>
-<LI>Who you are 
-<LI>How you prove who you are 
+<LI>Who you are</LI>
+<LI>How you prove who you are</LI>
 <LI>What that allows you to do</LI>
 </OL>
 <DIV>&nbsp;</DIV>
@@ -54,19 +54,23 @@
 <DIV>&nbsp;</DIV>
 <DIV>In real life, this is usually through some official documents such as:</DIV>
 <UL>
-<LI>Driving License 
-<LI>Passport</LI></UL>
+<LI>Driving License</LI>
+<LI>Passport</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <DIV>In computing terms, a user also has a set of security credentials. Some common examples include:</DIV>
 <UL>
-<LI>username + password 
-<UL>
-<LI>The password acts as a "shared secret" that is only known to the receiver and that one user. Possession of that password proves the user is who they say they are. Unfortunately most users tend to use insecure or easily guessable passwords, or divulge their passwords through "social engineering" attacks.
+<LI>username + password
+  <UL>
+  <LI>The password acts as a "shared secret" that is only known to the receiver and that one user. Possession of that password proves the user is who they say they are. Unfortunately most users tend to use insecure or easily guessable passwords, or divulge their passwords through "social engineering" attacks.</LI>
+  </UL>
+</LI>
+<LI>X509 certificates
+  <UL>
+  <LI>X509 certificates are part of the Internet standard public / private key cryptography system. A certificate is digitally signed by an issuing authority and binds a public key to a particular subject. Possession of that subject's private key to match the public key in the certificate proves the identity asserted by the certificate.</LI>
+  </UL>
 </LI>
 </UL>
-<LI>X509 certificates 
-<UL>
-<LI>X509 certificates are part of the Internet standard public / private key cryptography system. A certificate is digitally signed by an issuing authority and binds a public key to a particular subject. Possession of that subject's private key to match the public key in the certificate proves the identity asserted by the certificate.</LI></UL></LI></UL>
 <DIV>&nbsp;</DIV>
 <DIV>It is technically possible to create fake security credentials in computing systems just as much as in real life - and in both cases various steps (both technical and procedural) are taken to make it hard to do this, and make it easier to detect the fakes.</DIV>
 <DIV>&nbsp;</DIV>
@@ -75,20 +79,19 @@
 <DIV>&nbsp;</DIV>
 <DIV>Some real life examples illustrate the concept here:</DIV>
 <UL>
-<LI>Passports 
-<UL>
-<LI>Holding a UK passport proves someone is a UK Citizen 
-<LI>Being a UK Citizen allows that person to live and work in the UK 
-<LI>Being a UK Citizen also allows that person to live and work in any other country in the European Union 
-<LI>Losing their passport does not stop someone being a UK Citizen; it just makes it harder to prove they are a citizen.
+<LI>Passports
+  <UL>
+  <LI>Holding a UK passport proves someone is a UK Citizen</LI>
+  <LI>Being a UK Citizen allows that person to live and work in the UK</LI>
+  <LI>Being a UK Citizen also allows that person to live and work in any other country in the European Union</LI>
+  <LI>Losing their passport does not stop someone being a UK Citizen; it just makes it harder to prove they are a citizen.</LI>
+  </UL>
 </LI>
-</UL>
-<LI>Driving Licenses 
-<UL>
-<LI>A standard driving license shows someone is allowed to drive a car 
-<LI>Someone is not allowed to drive a Heavy Goods Vehicle unless they hold a HGV Driving License
-</LI>
-</UL>
+<LI>Driving Licenses
+  <UL>
+  <LI>A standard driving license shows someone is allowed to drive a car</LI>
+  <LI>Someone is not allowed to drive a Heavy Goods Vehicle unless they hold a HGV Driving License</LI>
+  </UL>
 </LI>
 </UL>
 <DIV>&nbsp;</DIV>
@@ -96,8 +99,9 @@
 <DIV>&nbsp;</DIV>
 <DIV>Permissions and credentials are then used to make policy enforcement decisions, such as:</DIV>
 <UL>
-<LI>Is a person allowed to drive a Heavy Goods Vehicle / Lorry? 
-<LI>Is a person allowed to work in the UK?</LI></UL>
+<LI>Is a person allowed to drive a Heavy Goods Vehicle / Lorry?</LI>
+<LI>Is a person allowed to work in the UK?</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <DIV>&nbsp;</DIV>
 
@@ -113,27 +117,31 @@
 <H3><a name="sect_3.2"/>3.2. Security and Identity Considerations for Web Services Applications</H3>
 <DIV>There are several security and identity considerations that need to be borne in mind for any Web Services application:</DIV>
 <UL>
-<LI>Caller Authentication 
-<LI>Caller Authorization 
-<LI>Caller Attributes</LI></UL>
+<LI>Caller Authentication</LI>
+<LI>Caller Authorization</LI>
+<LI>Caller Attributes</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <H4><a name="sect_3.2.1"/>3.2.1. Authentication</H4>
 <DIV>Web Services authentication is about mechanisms to answer the following questions:</DIV>
 <UL>
-<LI>Who is the caller? 
-<LI>How did they prove their identity? 
-<LI>Do we trust the source of these credentials? </LI></UL>
+<LI>Who is the caller? </LI>
+<LI>How did they prove their identity? </LI>
+<LI>Do we trust the source of these credentials? </LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <H4><a name="sect_3.2.2"/>3.2.2. Authorization</H4>
 <DIV>Web Services authorization is about answering the following questions:</DIV>
 <UL>
-<LI>What is the caller allowed to do?</LI></UL>
+<LI>What is the caller allowed to do?</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <H4><a name="sect_3.2.3"/>3.2.3. Attributes</H4>
 <DIV>Caller identity attributes are concerned with answers to the following questions:</DIV>
 <UL>
-<LI>What other facts or unique attributes do we know about the caller? For example, e-mail address, display preferences, department, employee number 
-<LI>How do we use this attribute information in the application? For example, customizing the data returned to the caller based on their display preferences</LI></UL>
+<LI>What other facts or unique attributes do we know about the caller? For example, e-mail address, display preferences, department, employee number</LI>
+<LI>How do we use this attribute information in the application? For example, customizing the data returned to the caller based on their display preferences</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <DIV>&nbsp;</DIV>
 
@@ -142,38 +150,53 @@
 <H3><a name="sect_4.1"/>4.1. Requirements for Interoperable Security and Identity</H3>
 <DIV>To achieve interoperable security and identity, web services require standardized mechanisms of doing all of the following:</DIV>
 <UL>
-<LI><B>Representing security credential data in XML</B> 
-<UL>
-<LI>There needs to be a standardized format for representing security credentials and tokens using XML, to allow the widest interoperability. 
-<LI>For example, this can be done through the Security Assertions Markup Language (SAML) specification <A href="#SAML">[SAML]</A>, or using the encoding rules for binary security tokens defined in the WS_Security specification <A href="#WSSE">[WSSE]</A>. </LI></UL>
-<LI><B>Obtaining credential data or security tickets</B> 
-<UL>
-<LI>For true interoperability, there needs to be a standardized mechanism to obtain security credentials or tickets in the first place. This is usually done by using a WSDL and SOAP call to an interface on a security authority service such as a single-sign-on product. 
-<LI>For example, single-sign-on services such as Microsoft Passport <A href="#.NET_Passport">[.NET Passport]</A> or Liberty Alliance <A href="#Liberty_Alliance">[Liberty Alliance]</A> specifications can issue session ticket tokens valid for the defined period. </LI></UL>
-<LI><B>Transport credential data in a SOAP message</B> 
-<UL>
-<LI>There needs to be a way of packaging the credential data or security tokens into a SOAP message in an agreed manner, so that both client and server can find, decode and process the credentials in the necessary manner. 
-<LI>For example, SOAP header fields defined in the ws-security specification <A href="#WSSE">[WSSE]</A> </LI></UL></LI></UL>
+<LI><B>Representing security credential data in XML</B>
+  <UL>
+  <LI>There needs to be a standardized format for representing security credentials and tokens using XML, to allow the widest interoperability.</LI>
+  <LI>For example, this can be done through the Security Assertions Markup Language (SAML) specification <A href="#SAML">[SAML]</A>, or using the encoding rules for binary security tokens defined in the WS_Security specification <A href="#WSSE">[WSSE]</A>. </LI>
+  </UL>
+</LI>
+<LI><B>Obtaining credential data or security tickets</B>
+  <UL>
+  <LI>For true interoperability, there needs to be a standardized mechanism to obtain security credentials or tickets in the first place. This is usually done by using a WSDL and SOAP call to an interface on a security authority service such as a single-sign-on product.</LI>
+  <LI>For example, single-sign-on services such as Microsoft Passport <A href="#.NET_Passport">[.NET Passport]</A> or Liberty Alliance <A href="#Liberty_Alliance">[Liberty Alliance]</A> specifications can issue session ticket tokens valid for the defined period. </LI>
+  </UL>
+</LI>
+<LI><B>Transport credential data in a SOAP message</B>
+  <UL>
+  <LI>There needs to be a way of packaging the credential data or security tokens into a SOAP message in an agreed manner, so that both client and server can find, decode and process the credentials in the necessary manner.</LI>
+  <LI>For example, SOAP header fields defined in the ws-security specification <A href="#WSSE">[WSSE]</A> </LI>
+  </UL>
+</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <H3><a name="sect_4.2"/>4.2. Types of Security Tokens</H3>
 <DIV>The WS-Security specification <A href="#WSSE">[WSSE]</A> defines the following types of security tokens:</DIV>
 <UL>
-<LI><B>Unsigned security tokens</B> 
-<UL>
-<LI>Username</LI></UL>
-<LI><B>Signed security tokens</B> 
-<UL>
-<LI>X.509 certificates (binary) 
-<LI>Kerberos tickets (binary)</LI></UL>
-<LI><B>XML security tokens</B> 
-<UL>
-<LI>Any XML token, such as <A href="#SAML">SAML</A> 
-<LI>Usually self verifying / signed</LI></UL></LI></UL>
+<LI><B>Unsigned security tokens</B>
+  <UL>
+  <LI>Username</LI>
+  </UL>
+</LI>
+<LI><B>Signed security tokens</B>
+  <UL>
+  <LI>X.509 certificates (binary)</LI>
+  <LI>Kerberos tickets (binary)</LI>
+  </UL>
+</LI>
+<LI><B>XML security tokens</B>
+  <UL>
+  <LI>Any XML token, such as <A href="#SAML">SAML</A></LI>
+  <LI>Usually self verifying / signed</LI>
+  </UL>
+</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <DIV>This leads to two main types of interaction when security credentials are being used with XML SOAP messages:</DIV>
 <UL>
-<LI>Using non self-validating credentials - See <A href="#sect_4.3.1">Section 4.3.1</A> 
-<LI>Using self-validating credentials - See <A href="#sect_4.3.1">Section 4.3.2</A> </LI></UL>
+<LI>Using non self-validating credentials - See <A href="#sect_4.3.1">Section 4.3.1</A> </LI>
+<LI>Using self-validating credentials - See <A href="#sect_4.3.1">Section 4.3.2</A> </LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <DIV>The main difference between these two is whether the receiver of the XML message can verify and validate the security credentials in the SOAP message without referring back to the authority service that issued the credentials.</DIV>
 <DIV>&nbsp;</DIV>
@@ -184,7 +207,7 @@
 <DIV>&nbsp;</DIV>
 <DIV>&nbsp; 
 <DIV style="DISPLAY: block; MARGIN-LEFT: auto; MARGIN-RIGHT: auto; TEXT-ALIGN: center">
-<A style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BACKGROUND-COLOR: transparent; BORDER-RIGHT-WIDTH: 0px" href="http://knol.google.com/k/-/-/bletfqentzdb/9lzfkc/ws-identity-not-self-val-creds.png"><IMG style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" src="http://knol.google.com/k/-/-/bletfqentzdb/9lzfkc/ws-identity-not-self-val-creds.png"></A>
+<A style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BACKGROUND-COLOR: transparent; BORDER-RIGHT-WIDTH: 0px" href="http://knol.google.com/k/-/-/bletfqentzdb/9lzfkc/ws-identity-not-self-val-creds.png"><IMG style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" src="http://knol.google.com/k/-/-/bletfqentzdb/9lzfkc/ws-identity-not-self-val-creds.png"/></A>
 </DIV>
 </DIV>
 <DIV><B>Figure 1. Typical XML Security Dialogue - Non Self-Validating Credentials</B></DIV>
@@ -195,8 +218,9 @@
 <DIV>&nbsp;</DIV>
 <DIV>Self-validating credentials are usually achieved by the authority service which issued the security token digitally signing the credentials using their private key, and the receiver of the credentials then verifying using the issuing authority's public key which it already trusts.</DIV>
 <DIV>&nbsp;</DIV>
-<DIV>
-<DIV style="DISPLAY: block; MARGIN-LEFT: auto; MARGIN-RIGHT: auto; TEXT-ALIGN: center"><A style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BACKGROUND-COLOR: transparent; BORDER-RIGHT-WIDTH: 0px" href="http://knol.google.com/k/-/-/bletfqentzdb/9lzfkc/ws-identity-self-val-creds.png"><IMG style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" src="http://knol.google.com/k/-/-/bletfqentzdb/9lzfkc/ws-identity-self-val-creds.png"></A></DIV>&nbsp;</DIV>
+<DIV style="DISPLAY: block; MARGIN-LEFT: auto; MARGIN-RIGHT: auto; TEXT-ALIGN: center">
+<A style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BACKGROUND-COLOR: transparent; BORDER-RIGHT-WIDTH: 0px" href="http://knol.google.com/k/-/-/bletfqentzdb/9lzfkc/ws-identity-self-val-creds.png"><IMG style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" src="http://knol.google.com/k/-/-/bletfqentzdb/9lzfkc/ws-identity-self-val-creds.png"/></A>
+</DIV>
 <DIV><a name="figure_2"/><B>Figure 2. Typical XML Security Dialogue - Self-Validating Credentials</B></DIV>
 <DIV>&nbsp;</DIV>
 <DIV>&nbsp;</DIV>
@@ -206,30 +230,39 @@
 <DIV>&nbsp;</DIV>
 <DIV>The SAML specification defines:</DIV>
 <UL>
-<LI>How to represent security credentials ("Assertions" in <A href="#SAML">SAML</A> parlance) using XML 
-<LI>An XML message exchange protocol for querying a SAML Authority service</LI></UL>
+<LI>How to represent security credentials ("Assertions" in <A href="#SAML">SAML</A> parlance) using XML</LI>
+<LI>An XML message exchange protocol for querying a SAML Authority service</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <DIV>The SAML specification DOES NOT define:</DIV>
 <UL>
-<LI>How to obtail security credentials ("Assertions") in the first place</LI></UL>
+<LI>How to obtain security credentials ("Assertions") in the first place</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <H3><a name="sect_5.1"/>5.1. SAML Assertion Types</H3>
 <DIV>&nbsp;</DIV>
 <DIV>There are three types of assertions defined in the SAML specification <A href="#SAML">[SAML]</A> </DIV>
 <DIV>&nbsp;</DIV>
 <UL>
-<LI><B>SAML Authentication Assertions</B> 
-<UL>
-<LI>The results of an authentication action performed on a subject by a SAML authority 
-<LI>Statements of the form: "An issuing authority asserts that subject S was authenticated by means M at time T" </LI></UL>
-<LI><B>SAML Attribute Assertions</B> 
-<UL>
-<LI>Attribute information about a subject 
-<LI>Statements of the form: "An issuing authority asserts that subject S is associated with attributes A, B and C with values 'a', 'b' and 'c'" </LI></UL>
-<LI><B>SAML Authorization Assertions</B> 
-<UL>
-<LI>Authorization permissions that apply to a subject with respect to a specified resource 
-<LI>Statements of the form: "An issuing authority decides whether to grant the request by subject S for access type A to resource R given evidence E" </LI></UL></LI></UL>
+<LI><B>SAML Authentication Assertions</B>
+  <UL>
+  <LI>The results of an authentication action performed on a subject by a SAML authority</LI>
+  <LI>Statements of the form: "An issuing authority asserts that subject S was authenticated by means M at time T" </LI>
+  </UL>
+</LI>
+<LI><B>SAML Attribute Assertions</B>
+  <UL>
+  <LI>Attribute information about a subject</LI>
+  <LI>Statements of the form: "An issuing authority asserts that subject S is associated with attributes A, B and C with values 'a', 'b' and 'c'" </LI>
+  </UL>
+</LI>
+<LI><B>SAML Authorization Assertions</B>
+  <UL>
+  <LI>Authorization permissions that apply to a subject with respect to a specified resource</LI>
+  <LI>Statements of the form: "An issuing authority decides whether to grant the request by subject S for access type A to resource R given evidence E" </LI>
+  </UL>
+</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <DIV>&nbsp;</DIV>
 
@@ -237,9 +270,10 @@
 <DIV>&nbsp;</DIV>
 <DIV>The following sections provide examples of the main type of security credentials carried in SOAP message:</DIV>
 <UL>
-<LI>Username token - <A href="#sect_6.1">Section 6.1</A> 
-<LI>X509 binary certificate - <A href="#sect_6.2">Section 6.2</A> 
-<LI>SAML authentication assertion - <A href="#sect_6.3">Section 6.3</A> </LI></UL>
+<LI>Username token - <A href="#sect_6.1">Section 6.1</A> </LI>
+<LI>X509 binary certificate - <A href="#sect_6.2">Section 6.2</A> </LI>
+<LI>SAML authentication assertion - <A href="#sect_6.3">Section 6.3</A> </LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <H3><A name="sect_6.1"/>6.1. A Username Token in a WS-Security SOAP Header</H3>
 <DIV>&nbsp;</DIV>
@@ -340,10 +374,11 @@
 <DIV>Single-sign-on services provide a single point of logon and authentication. They also provide a standardized way to obtain suitable credentials to prove an authenticated identity.</DIV>
 <DIV>The main contenders currently seem to be:</DIV>
 <UL>
-<LI>Liberty Alliance <A href="#Liberty_Alliance">[Liberty Alliance]</A> 
-<LI>Microsoft Passport <A href="#.NET_Passport">[.NET Passport]</A> 
-<LI>Proprietary security products such as Netegrity SiteMinder which are added direct SAML interfaces 
-<LI>WS-Trust - A new specification to provide a standardized interface <A href="#WS-Trust">[WS-Trust]</A> </LI></UL>
+<LI>Liberty Alliance <A href="#Liberty_Alliance">[Liberty Alliance]</A> </LI>
+<LI>Microsoft Passport <A href="#.NET_Passport">[.NET Passport]</A> </LI>
+<LI>Proprietary security products such as Netegrity SiteMinder which are added direct SAML interfaces</LI>
+<LI>WS-Trust - A new specification to provide a standardized interface <A href="#WS-Trust">[WS-Trust]</A> </LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <DIV>This still remains an area needing real standardization, and is an area that Web Services Interoperability Organization (WS-I>)<A href="#WS-I">[WS-I]</A> is now turning its attention to through it's Web Services Basic Security Profile.</DIV>
 <DIV>&nbsp;</DIV>
@@ -353,17 +388,19 @@
 <DIV>&nbsp;</DIV>
 <DIV>The Liberty specification v1.0 has two main facets:</DIV>
 <UL>
-<LI>Single sign-on 
-<LI>Identity federation</LI></UL>
+<LI>Single sign-on</LI>
+<LI>Identity federation</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <H3><a name="sect_7.2"/>7.2. Microsoft .NET Passport</H3>
 <DIV>Microsoft .NET Passport <A href="#.NET_Passport">[.NET Passport]</A> is a suite of Web-based services that makes using the Internet and purchasing online easier and faster for users.</DIV>
 <DIV>&nbsp;</DIV>
 <DIV>Microsoft has previously declared plans to upgrade the current Passport facilities to:</DIV>
 <UL>
-<LI>Provide an XML interface 
-<LI>Support federation 
-<LI>Use Kerberos v5 as the underlying mechanism for securely exchanging credentials</LI></UL>
+<LI>Provide an XML interface</LI>
+<LI>Support federation</LI>
+<LI>Use Kerberos v5 as the underlying mechanism for securely exchanging credentials</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <H3><a name="sect_7.3"/>7.3. WS-Trust</H3>
 <DIV>&nbsp;</DIV>
@@ -391,10 +428,11 @@
 <DIV>&nbsp;</DIV>
 <DIV>So, we want to get to the situation of being able to make declarative statement of a web service applications security requirements in the following areas:</DIV>
 <UL>
-<LI>Permitted authentication realms / single-sign-on services 
-<LI>Required transport security attributes (for example, "Callers must use encrypted / SSL connections") 
-<LI>Required message security attributes (for example, "Messages must be digitally signed") 
-<LI>Role-based access control lists applied at the granularity of the operation / method call.</LI></UL>
+<LI>Permitted authentication realms / single-sign-on services</LI>
+<LI>Required transport security attributes (for example, "Callers must use encrypted / SSL connections")</LI>
+<LI>Required message security attributes (for example, "Messages must be digitally signed") </LI>
+<LI>Role-based access control lists applied at the granularity of the operation / method call.</LI>
+</UL>
 <DIV>&nbsp;</DIV>
 <DIV>There are some moves afoot to add some of this declarative security information into WSDL files, but there are no real standards for this at the moment. Watch this space though.</DIV>
 <DIV>&nbsp;</DIV>
@@ -415,19 +453,18 @@
 <H2>Bibliography</H2>
 <DIV>&nbsp;</DIV>
 <OL>
-<LI><a name="CC4_Server"/>[CC4 Server] Cape Clear 4 Server - Enterprise-grade Web Services Integration Platform from Cape Clear Software Inc. <A href="http://www.capeclear.com/products/server/">http://www.capeclear.com/products/server/</A> 
-<LI><a name="Kerberos"/>[Kerberos] J. Kohl and C. Neuman, "The Kerberos Network Authentication Service (V5)," RFC 1510, September 1993. <A href="http://www.ietf.org/rfc/rfc1510.txt">http://www.ietf.org/rfc/rfc1510.txt</A> 
-<LI><a name="Liberty_Alliance"/>[Liberty Alliance] Liberty Alliance Project <A href="http://www.projectliberty.org/">http://www.projectliberty.org/</A> 
-<LI><a name=".NET_Passport"/>[.NET Passport] Microsoft .NET Passport <A href="http://www.passport.com/">http://www.passport.com/</A> 
-<LI><a name="SAML"/>[SAML] SAML - Security Assertions Markup Language v1.0, OASIS XML-Based Security Services Technical Committee, 05-Nov-2002 <A href="http://www.oasis-open.org/committees/security/#documents/">http://www.oasis-open.org/committees/security/#documents/</A> 
-<LI><a name="SOAP"/>[SOAP] W3C Note, "SOAP: Simple Object Access Protocol 1.1", 08-May-2000. <A href="http://www.w3.org/TR/2000/NOTE-SOAP-20000508">http://www.w3.org/TR/2000/NOTE-SOAP-20000508</A> 
-<LI><a name="WS-I"/>[WS-I] WS-I - The Web Services Interoperability Organization <A href="http://www.ws-i.org/">http://www.ws-i.org/</A> 
-<LI><a name="WSSE"/>[WSSE] WS-Security specification v1.0, 05-Apr-2002 <A href="http://schemas.xmlsoap.org/specs/ws-security/ws-security.htm">http://schemas.xmlsoap.org/specs/ws-security/ws-security.htm</A> 
-<LI><a name="WSSE-XML"/>[WSSE-XML] WS-Security Profile for XML-based Tokens v1.0, 28-Aug-2002 <A href="http://msdn.microsoft.com/library/en-us/dnglobspec/html/ws-security-xml-tokens.asp">http://msdn.microsoft.com/library/en-</A> <A href="http://msdn.microsoft.com/library/en-us/dnglobspec/html/ws-security-xml-tokens.asp">us/dnglobspec/html/ws-security-xml-tokens.asp</A> 
-<LI><a name="WS-Trust"/>[WS-Trust] WS-Trust specification v1.0, 18-Dec-2002 <A href="http://msdn.microsoft.com/library/en-us/dnglobspec/html/ws-trust.asp">http://msdn.microsoft.com/library/en-us/dnglobspec/html/ws-trust.asp</A> 
-<LI><a name="XML_Signature"/>[XML Signature] W3C Recommendation, "XML Signature Syntax and Processing", 12 February 2002. <A href="http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/">http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/</A> 
-<LI><a name="XML_Encryption"/>[XML Encryption] W3C Recommendation, "XML Encryption Syntax and Processing" 10 December 2002. <A href="http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/">http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/</A> 
-</LI>
+<LI><a name="CC4_Server"/>[CC4 Server] Cape Clear 4 Server - Enterprise-grade Web Services Integration Platform from Cape Clear Software Inc. <A href="http://www.capeclear.com/products/server/">http://www.capeclear.com/products/server/</A> </LI>
+<LI><a name="Kerberos"/>[Kerberos] J. Kohl and C. Neuman, "The Kerberos Network Authentication Service (V5)," RFC 1510, September 1993. <A href="http://www.ietf.org/rfc/rfc1510.txt">http://www.ietf.org/rfc/rfc1510.txt</A> </LI>
+<LI><a name="Liberty_Alliance"/>[Liberty Alliance] Liberty Alliance Project <A href="http://www.projectliberty.org/">http://www.projectliberty.org/</A> </LI>
+<LI><a name=".NET_Passport"/>[.NET Passport] Microsoft .NET Passport <A href="http://www.passport.com/">http://www.passport.com/</A> </LI>
+<LI><a name="SAML"/>[SAML] SAML - Security Assertions Markup Language v1.0, OASIS XML-Based Security Services Technical Committee, 05-Nov-2002 <A href="http://www.oasis-open.org/committees/security/#documents/">http://www.oasis-open.org/committees/security/#documents/</A> </LI>
+<LI><a name="SOAP"/>[SOAP] W3C Note, "SOAP: Simple Object Access Protocol 1.1", 08-May-2000. <A href="http://www.w3.org/TR/2000/NOTE-SOAP-20000508">http://www.w3.org/TR/2000/NOTE-SOAP-20000508</A> </LI>
+<LI><a name="WS-I"/>[WS-I] WS-I - The Web Services Interoperability Organization <A href="http://www.ws-i.org/">http://www.ws-i.org/</A> </LI>
+<LI><a name="WSSE"/>[WSSE] WS-Security specification v1.0, 05-Apr-2002 <A href="http://schemas.xmlsoap.org/specs/ws-security/ws-security.htm">http://schemas.xmlsoap.org/specs/ws-security/ws-security.htm</A> </LI>
+<LI><a name="WSSE-XML"/>[WSSE-XML] WS-Security Profile for XML-based Tokens v1.0, 28-Aug-2002 <A href="http://msdn.microsoft.com/library/en-us/dnglobspec/html/ws-security-xml-tokens.asp">http://msdn.microsoft.com/library/en-</A> <A href="http://msdn.microsoft.com/library/en-us/dnglobspec/html/ws-security-xml-tokens.asp">us/dnglobspec/html/ws-security-xml-tokens.asp</A> </LI>
+<LI><a name="WS-Trust"/>[WS-Trust] WS-Trust specification v1.0, 18-Dec-2002 <A href="http://msdn.microsoft.com/library/en-us/dnglobspec/html/ws-trust.asp">http://msdn.microsoft.com/library/en-us/dnglobspec/html/ws-trust.asp</A> </LI>
+<LI><a name="XML_Signature"/>[XML Signature] W3C Recommendation, "XML Signature Syntax and Processing", 12 February 2002. <A href="http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/">http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/</A> </LI>
+<LI><a name="XML_Encryption"/>[XML Encryption] W3C Recommendation, "XML Encryption Syntax and Processing" 10 December 2002. <A href="http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/">http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/</A> </LI>
 </OL>
 <DIV>&nbsp;</DIV>
 <DIV>&nbsp;</DIV>
